@@ -1,0 +1,25 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: apollo-app
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db01?&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    redis:
+      host: localhost
+      port: 6379
+      password:
+
+app:
+  id: apollo-spring-boot #应用ID
+apollo:
+  meta: http://localhost:8080
+  bootstrap:
+    enabled: true #启用 apollo
+    namespaces: application.properties #需要加载namespces
+
+hello:
+  'world'
